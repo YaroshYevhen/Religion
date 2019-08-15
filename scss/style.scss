@@ -123,6 +123,9 @@ $color: #1d1d1d;
 .icon-ok:before {
   content: "\e911";
 }
+.icon-download:before {
+  content: "\e912";
+}
 .icon-dropdown {
   font-size: 5px;
   vertical-align: middle;
@@ -1364,6 +1367,9 @@ body.menu {
       background-color: #efefef;
       transition: background-color .3s, color .3s;
     }
+    .icon-footer-vk {
+      font-size: 9px;
+    }
     & + .socials__item {
       margin-top: 20px;
     }
@@ -1410,6 +1416,9 @@ body.menu {
     font-weight: 600;
     cursor: pointer;
     transition: color .3s;
+    i {
+      margin-right: 5px;
+    }
   }
   .card-info {
     justify-content: flex-end;

@@ -9,7 +9,11 @@ app.asideOpen = $('.aside-title');
 
 
 app.document.ready(function(){
-
+  function showHeaderSearch(){
+    if($(window).width() < 1400 && $(window).width() > 1139){
+      console.log('yes');
+    }
+  }
   function currentSlideCount(item){
     var dotsLenght = $(item).find('.slick-dots li').length,
         activeIndex = $(item).find('.slick-dots li.slick-active').index() + 1;
@@ -17,6 +21,10 @@ app.document.ready(function(){
     $(item).find('.slick-dots').attr('data-lenght',dotsLenght);
     $(item).find('.slick-dots').attr('data-current',activeIndex);
   }
+  showHeaderSearch();
+  $(window).on('resize', function(){
+    showHeaderSearch();
+  });
   app.hamburger.on('click', function(){
     $(this).toggleClass('active');
     $('body').toggleClass('menu');
