@@ -83,6 +83,18 @@
   }
 }
 
+@media (max-width: 1399px) and (min-width: 1140px) {
+  .header-search .search {
+    transition: max-width .3s;
+    position: absolute;
+    left: 16px;
+    width: 150px;
+  }
+  .header-search .search.show {
+    max-width: calc(20vw - 149px);
+  }
+}
+
 /* max-width 1139px */
 @media (max-width: 1139px) {
   .politics {

@@ -12,7 +12,12 @@ app.document.ready(function(){
   function showHeaderSearch(){
     if($(window).width() < 1400 && $(window).width() > 1139){
       $('.header-search').on('click', function(){
-        
+        $(this).find('.search').addClass('show');
+      });
+      $(document).on('click', function(event){
+        if(!$(event.target).parents('.header-search').length){
+          $('.header-search').find('.search').removeClass('show');
+        }
       })
     }
   }
