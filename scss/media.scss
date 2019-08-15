@@ -99,6 +99,9 @@
 /* max-width 1139px */
 
 @media (max-width: 1139px){
+  .politics {
+    max-width: 720px;
+  }
   .main {
     padding-bottom: 80px;
   }
@@ -288,6 +291,12 @@
 /* max-width 719px */
 
 @media (max-width: 719px){
+  .politics {
+    max-width: 360px;
+    h1 {
+      font-size: 32px;
+    }
+  }
   .main {
     padding-bottom: 60px;
   }
