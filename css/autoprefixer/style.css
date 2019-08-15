@@ -1685,10 +1685,19 @@ body.menu .header-search {
 
 .consulting .news-card__content {
   margin: -14.7% auto 0;
+  -webkit-transition: z-index 0s;
+  transition: z-index 0s;
+  -webkit-transition-delay: .3s;
+  transition-delay: .3s;
+  z-index: 0;
 }
 
 .consulting .news-card__content.show {
   z-index: 1;
+  -webkit-transition: z-index 0s;
+  transition: z-index 0s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
 }
 
 .consulting .news-card__content.show .consulting__more::before {

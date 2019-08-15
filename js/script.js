@@ -22,6 +22,9 @@ app.document.ready(function(){
     $('body').toggleClass('menu');
     $('html').toggleClass('overflow');
   });
+  $('.responses__show').on('click', function(){
+    $(this).parents('.responses').toggleClass('show');
+  });
   app.asideOpen.on('click', function(){
     $(this).parents('.main-aside__content').toggleClass('show');
   });
@@ -33,8 +36,8 @@ app.document.ready(function(){
       arrows: true,
       focusOnSelect: true,
       dots: true,
-      prevArrow: '<button class="slick-prev slick-arrow flex-c-c"><i class="icon-uniE00E"><</i></button>',
-      nextArrow: '<button class="slick-next slick-arrow flex-c-c"><i class="icon-uniE00F">></i></button>',
+      prevArrow: '<button class="slick-prev slick-arrow flex-c-c"><i class="icon-slider-left"></i></button>',
+      nextArrow: '<button class="slick-next slick-arrow flex-c-c"><i class="icon-slider-right"></i></button>',
       responsive: [{
         breakpoint: 1140,
         settings: {
@@ -71,7 +74,7 @@ app.document.ready(function(){
   function getCurrentText(item){
     var current = $(item).find('.current').text();
 
-    $(item).find('.text').text(current);
+    $(item).find('.text').html(current + '<i class="icon-dropdown"></i>');
   }
   app.sortList.on('click', function(){
     $(this).toggleClass('active');

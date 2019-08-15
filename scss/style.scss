@@ -66,10 +66,67 @@ $color: #1d1d1d;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow:before {
+.icon-slider-right:before {
   content: "\e900";
+  font-size: 10px;
 }
-
+.icon-slider-left:before {
+  content: "\e901";
+  font-size: 10px;
+}
+.icon-footer-email:before {
+  content: "\e902";
+}
+.icon-footer-vk:before {
+  content: "\e903";
+}
+.icon-comments:before {
+  content: "\e904";
+}
+.icon-sort:before {
+  content: "\e905";
+}
+.icon-dropdown:before {
+  content: "\e906";
+  font-size: 5px;
+}
+.icon-search:before {
+  content: "\e907";
+}
+.icon-star:before {
+  content: "\e908";
+}
+.icon-eye:before {
+  content: "\e909";
+}
+.icon-share:before {
+  content: "\e90a";
+}
+.icon-categories:before {
+  content: "\e90b";
+}
+.icon-marks:before {
+  content: "\e90c";
+}
+.icon-tg:before {
+  content: "\e90d";
+}
+.icon-fb:before {
+  content: "\e90e";
+}
+.icon-phone:before {
+  content: "\e90f";
+}
+.icon-tw:before {
+  content: "\e910";
+}
+.icon-ok:before {
+  content: "\e911";
+}
+.icon-dropdown {
+  font-size: 5px;
+  vertical-align: middle;
+}
 html{
   overflow-x: hidden;
   &.overflow{
@@ -251,6 +308,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     transition: color .3s;
     a{
       display: inline;
+      transition: color .3s;
     }
     &:last-child{
       color: #989898!important;
@@ -469,7 +527,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     width: 20.6%;
     img{
       width: 244px;
-      height: 59px;
     }
   }
   &-nav{
@@ -484,14 +541,14 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     a{
       position: relative;
       &:before,&:after{
-        content: "\e900";
+        content: "\e906";
         font-family: 'icomoon';
         font-size: 4px;
         position: absolute;
         left: 50%;
         display: none;
         color: inherit;
-        transform: translateX(-50%);
+        transform: translateX(-50%) rotate(180deg);
         transition: top .3s,bottom .3s;
       }
       &:after{
@@ -499,7 +556,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
       }
       &:before{
         top: -15px;
-        transform: translateX(-50%) rotate(180deg);
+        transform: translateX(-50%);
       }
       &[aria-current="page"]{
         color: #6f3d1c;
@@ -703,6 +760,9 @@ body.menu {
       margin-bottom: 30px;
       text-transform: uppercase;
       letter-spacing: -.1px;
+      i {
+        display: none;
+      }
     }
     a{
       transition: color .3s;
@@ -886,6 +946,8 @@ body.menu {
     .card-info{
       justify-content: center;
       .card-info__item{
+        display: flex;
+        align-items: center;
         background: #fff;
         position: relative;
       }
@@ -1022,20 +1084,20 @@ body.menu {
     position: relative;
     z-index: 2;
     width: 100%;
-    &:before{
-      content:'1';
+    i {
+      content:'';
       display: block;
       font-size: 8px;
       position: absolute;
       right: 0;
       top: calc(50% - 4px);
-      transform: translateY(-50%) rotate(-180deg);
+      transform: translateY(-50%);
       transition: transform .3s;
     }
   }
   &.active{
-    .text:before{
-      transform: translateY(-50%);
+    .text i{
+      transform: translateY(-50%) rotate(-180deg);
     }
     .sort-list{
       padding: 80px 24px 27px 24px;
@@ -1075,6 +1137,9 @@ body.menu {
 // page-about
 .about-links{
   padding: 0 44px;
+  a {
+    transition: color .3s;
+  }
   i{
     font-size: 13px;
     margin-right: 8px;
@@ -1302,6 +1367,9 @@ body.menu {
     & + .socials__item {
       margin-top: 20px;
     }
+    .icon-footer-email {
+      font-size: 11px;
+    }
   }
 }
 //
@@ -1407,6 +1475,8 @@ body.menu {
     margin-right: 15px;
   }
   &__item {
+    cursor: pointer;
+    transition: color .3s;
     & + .star-rating__item {
       margin-left: 10px;
     }
@@ -1424,6 +1494,12 @@ body.menu {
     & + .share__item {
       margin-left: 10px;
     }
+  }
+  .icon-tw {
+    font-size: 11px;
+  }
+  .icon-footer-vk {
+    font-size: 9px;
   }
 }
 
@@ -1723,7 +1799,6 @@ body.menu {
     width: 22.5%;
     img{
       width: 138px;
-      height: 77px;
     }
   }
   &-nav{
@@ -1748,8 +1823,11 @@ body.menu {
     display: flex;
     flex-direction: column;
     padding-left: 115px;
-    height: 38px;
+    height: 44px;
     justify-content: space-between;
+    a {
+      transition: color .3s;
+    }
     i{
       margin-right: 10px;
       vertical-align: baseline;
@@ -1763,6 +1841,9 @@ body.menu {
     height: 30px;
     &__content{
       width: 460px;
+    }
+    a {
+      transition: color .3s;
     }
   }
 }
