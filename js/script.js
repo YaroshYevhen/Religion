@@ -11,7 +11,9 @@ app.asideOpen = $('.aside-title');
 app.document.ready(function(){
   function showHeaderSearch(){
     if($(window).width() < 1400 && $(window).width() > 1139){
-      console.log('yes');
+      $('.header-search').on('click', function(){
+        
+      })
     }
   }
   function currentSlideCount(item){
